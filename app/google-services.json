@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "270085521878",
+    "firebase_url": "https://dbsupermercato.firebaseio.com",
+    "project_id": "dbsupermercato",
+    "storage_bucket": "dbsupermercato.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270085521878:android:72b4543f90cb612e",
+        "android_client_info": {
+          "package_name": "it.alessandra.supermercato"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "270085521878-t152verhsjbvspjeceikvggh5qe77c75.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "it.alessandra.supermercato",
+            "certificate_hash": "1605a4b549d411246b1c44590043f8c02bc3fdbd"
+          }
+        },
+        {
+          "client_id": "270085521878-cfegagr04192fhf5118mfrc6rorf8lj2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGGTy7iYoGilvGu-qwhyYyELPQFLSkpFI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "270085521878-cfegagr04192fhf5118mfrc6rorf8lj2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

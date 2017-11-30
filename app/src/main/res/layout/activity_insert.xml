@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="it.alessandra.supermercato.InsertActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:id="@+id/relativeLayout3">
+
+        <TextView
+            android:id="@+id/textins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Inserisci"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="36sp"
+            android:textStyle="italic" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textins"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout3"
+        android:layout_marginTop="22dp">
+
+        <EditText
+            android:id="@+id/user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="Maca Prodotto"
+            android:inputType="textPersonName"
+            android:singleLine="false"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/editprezzo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Prezzo"
+            android:inputType="textPersonName"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/binserisci"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editprezzo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:text="Inserisci"
+            android:textColor="?android:attr/colorForeground" />
+    </RelativeLayout>
+</RelativeLayout>
