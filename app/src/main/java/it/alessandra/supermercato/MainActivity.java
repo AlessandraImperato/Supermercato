@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity implements TaskDelegate {
     private Supermercato supermercato;
     private List<Prodotto> prodotti;
     private ProgressDialog dialog;
-    SharedPreferences prefs;
+    private SharedPreferences prefs;
+    private TaskDelegate delegate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,9 +52,9 @@ public class MainActivity extends AppCompatActivity implements TaskDelegate {
         nomeUtente = prefs.getString("NOMEUTENTE", "Benvenuto ospite"); //Benvenuto ospite è il valore di default
         benvenuto.setText("Benvenuto " + nomeUtente);
 
-        TaskDelegate delegate = this;
-        /*popolamento lista prodotti*/
-        restCallprodotti(delegate);
+        delegate = this;
+
+       // restCallprodotti(delegate);
 
         bRegistrati.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,8 +67,8 @@ public class MainActivity extends AppCompatActivity implements TaskDelegate {
         bMostra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*TaskDelegate delegate = ??
-                restCallprodotti(delegate);*/
+                /*popolamento lista prodotti*/
+                restCallprodotti(delegate);
                 Intent i = new Intent(getApplicationContext(),ProductActivity.class);
                 startActivity(i);
             }
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements TaskDelegate {
                     String text = new String (responseBody);
                     try{
                         prodotti = JsonParse.getList(text);
-                        delegate.TaskCompletionResult("Benvenuto!");
+                        delegate.TaskCompletionResult("Prodotti caricati");
                     }catch (JSONException e){
                         e.printStackTrace();
                     }
