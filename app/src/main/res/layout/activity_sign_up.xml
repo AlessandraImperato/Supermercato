@@ -15,7 +15,7 @@
         android:layout_marginTop="17dp"
         android:text="Registrati"
         android:textAlignment="center"
-        android:textColor="?attr/colorControlActivated"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="36sp"
         android:textStyle="italic" />
 
@@ -40,6 +40,6 @@
         android:layout_below="@+id/user"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="102dp"
-        android:backgroundTint="?attr/colorControlActivated"
+        android:backgroundTint="@android:color/holo_red_dark"
         android:text="Salva Utente" />
 </RelativeLayout>

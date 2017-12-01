@@ -49,12 +49,12 @@ public class MainActivity extends AppCompatActivity implements TaskDelegate {
 
         prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
-        nomeUtente = prefs.getString("NOMEUTENTE", "Benvenuto ospite"); //Benvenuto ospite è il valore di default
+        nomeUtente = prefs.getString("NOMEUTENTE", "Ospite"); //Benvenuto ospite è il valore di default
         benvenuto.setText("Benvenuto " + nomeUtente);
 
         delegate = this;
 
-       // restCallprodotti(delegate);
+        restCallprodotti(delegate);
 
         bRegistrati.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements TaskDelegate {
             @Override
             public void onClick(View v) {
                 /*popolamento lista prodotti*/
-                restCallprodotti(delegate);
+                //restCallprodotti(delegate);
                 Intent i = new Intent(getApplicationContext(),ProductActivity.class);
                 startActivity(i);
             }
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements TaskDelegate {
         dialog.dismiss();
         dialog.cancel();
 
-        Toast.makeText(getApplicationContext(),result,Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(),result,Toast.LENGTH_LONG).show();
 
         supermercato.setProdotti(prodotti);
 

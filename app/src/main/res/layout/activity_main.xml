@@ -34,13 +34,14 @@
             android:id="@+id/benvenuto"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="11dp"
+            android:layout_centerVertical="true"
             android:text="Benvenuto Ospite"
             android:textAlignment="center"
+            android:textAllCaps="false"
             android:textColor="#FF0000"
-            android:textSize="25sp" />
+            android:textSize="30sp"
+            android:textStyle="italic" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -51,8 +52,8 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_alignTop="@+id/bmostraprod"
             android:layout_toEndOf="@+id/bmostraprod"
             app:srcCompat="@drawable/fotoprod" />
@@ -61,11 +62,13 @@
             android:id="@+id/bmostraprod"
             style="@android:style/Widget.Button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:backgroundTint="@android:color/holo_red_dark"
-            android:text="Mostra Prodotti" />
+            android:text="Mostra Prodotti"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
@@ -81,11 +84,13 @@
             android:id="@+id/bregistra"
             style="@android:style/Widget.Button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:backgroundTint="@android:color/holo_red_dark"
-            android:text="Registrati" />
+            android:text="Registrati"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageView2"

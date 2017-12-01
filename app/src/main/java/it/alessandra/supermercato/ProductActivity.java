@@ -1,5 +1,6 @@
 package it.alessandra.supermercato;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -8,16 +9,24 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.loopj.android.http.AsyncHttpResponseHandler;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductActivity extends AppCompatActivity {
+import cz.msebera.android.httpclient.Header;
+
+public class ProductActivity extends AppCompatActivity{
 
     private RecyclerView recyclerView;
     private LinearLayoutManager linearLayoutManager;
     private MyAdapter myAdapter;
     private FloatingActionButton floatingActionButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +49,8 @@ public class ProductActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(),InsertActivity.class);
                 startActivity(i);
-
             }
         });
     }
+
 }

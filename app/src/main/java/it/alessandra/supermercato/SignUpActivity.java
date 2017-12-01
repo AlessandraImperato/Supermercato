@@ -33,7 +33,6 @@ public class SignUpActivity extends AppCompatActivity implements TaskDelegate {
     private SharedPreferences prefs;
     private static FirebaseDatabase database;
     private DatabaseReference databaseReference;
-    private String chiave;
     private TaskDelegate delegate;
     private ProgressDialog dialog;
 

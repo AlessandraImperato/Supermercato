@@ -16,8 +16,8 @@
 
             <ImageView
                 android:id="@+id/imgprod"
-                android:layout_width="90dp"
-                android:layout_height="60dp"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/carrello" />
 
@@ -33,6 +33,7 @@
                     android:layout_height="wrap_content"
                     android:text="Marca"
                     android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_dark"
                     android:textSize="30sp" />
 
                 <TextView
@@ -41,6 +42,7 @@
                     android:layout_height="wrap_content"
                     android:text="Prezzo"
                     android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_dark"
                     android:textSize="30sp" />
             </LinearLayout>
         </LinearLayout>
