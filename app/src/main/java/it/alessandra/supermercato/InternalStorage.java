@@ -22,6 +22,7 @@ public final class InternalStorage {
         try{
             fos = context.openFileOutput(key,Context.MODE_PRIVATE);
             oos = new ObjectOutputStream(fos);
+            oos.writeObject(object);
             oos.close();
             fos.close();
         }catch (FileNotFoundException e){

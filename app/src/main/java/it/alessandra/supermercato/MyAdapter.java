@@ -41,6 +41,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(MyAdapter.ViewHolder holder, int position) {
         Prodotto temp = prodotti.get(position);
+
         if(temp instanceof Carne){
             holder.tMarca.setText(((Carne) temp).getMarca());
             holder.tPrezzo.setText(""+((Carne) temp).getPrezzo());

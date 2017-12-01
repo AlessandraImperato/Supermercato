@@ -1,5 +1,6 @@
 package it.alessandra.supermercato;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +8,7 @@ import java.util.List;
  * Created by utente7.academy on 30/11/2017.
  */
 
-public class Supermercato {
+public class Supermercato implements Serializable {
 
     private List<Prodotto> prodotti;
 
