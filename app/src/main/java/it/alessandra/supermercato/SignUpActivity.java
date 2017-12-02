@@ -81,7 +81,7 @@ public class SignUpActivity extends AppCompatActivity implements TaskDelegate {
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 if (statusCode == 200) {
                     String text = new String(responseBody);
-                    int index = JsonParseUtente.key(text);
+                    int index = JsonParseInsert.key(text);
                     databaseReference.child(generaKey(index)).setValue(username);
                     delegate.TaskCompletionResult("Utente registrato!");
                 }

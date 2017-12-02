@@ -104,12 +104,12 @@ public class InsertActivity extends AppCompatActivity implements TaskDelegate {
         dialog.setMessage("Caricamento");
         dialog.show();
 
-        FirebaseRestClient.get("Prodotti.json", null, new AsyncHttpResponseHandler() {
+        FirebaseRestClient.get("Prodotti/" +valSpinner+ ".json", null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 if (statusCode == 200) {
                     String text = new String(responseBody);
-                    int index = JsonParseProdotti.key(text);
+                    int index = JsonParseInsert.key(text);
                     databaseReference.child(valSpinner).child(generaKey(index)).child("Marca").setValue(marca);
                     databaseReference.child(valSpinner).child(generaKey(index)).child("Prezzo").setValue(prezzo);
                     delegate.TaskCompletionResult("Prodotto Registrato!");

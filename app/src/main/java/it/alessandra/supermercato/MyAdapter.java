@@ -41,20 +41,19 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(MyAdapter.ViewHolder holder, int position) {
         Prodotto temp = prodotti.get(position);
+        String m = "Marca: " + temp.getMarca();
+        String p = "€ " + temp.getPrezzo();
+
+        holder.tMarca.setText(m);
+        holder.tPrezzo.setText(p);
 
         if(temp instanceof Carne){
-            holder.tMarca.setText(((Carne) temp).getMarca());
-            holder.tPrezzo.setText(""+((Carne) temp).getPrezzo());
             holder.img.setImageResource(R.drawable.carne);
         }
         else if (temp instanceof Pesce){
-            holder.tMarca.setText(((Pesce) temp).getMarca());
-            holder.tPrezzo.setText(""+((Pesce) temp).getPrezzo());
             holder.img.setImageResource(R.drawable.pesce);
         }
         else if (temp instanceof Latte){
-            holder.tMarca.setText(((Latte) temp).getMarca());
-            holder.tPrezzo.setText(""+((Latte) temp).getPrezzo());
             holder.img.setImageResource(R.drawable.latte);
         }
     }
